@@ -2,11 +2,6 @@
 
     <?php
 
-        $servername = "sql1.njit.edu";
-        $username = "ssu23";
-        $password = "Bellyflop0624!";
-        $dbname = "ssu23";
-
         $con = mysqli_connect($servername, $username, $password, $dbname);
         
         if (mysqli_connect_errno()) {
@@ -49,5 +44,6 @@
         <input type="text" name="nameVar" id="nameVar" autocomplete="off"><br>
         <button type="submit" name="sub">Submit</button>
     </form>
+
 
 </body>
