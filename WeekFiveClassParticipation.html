@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<style>
+    .container {
+        margin-top: -10px;
+    }
+
+    .label {
+        display: inline;
+        position: fixed;
+    }
+
+    .box {
+        margin-left: 80px;
+        background-color: lightblue;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+</style>
+
+<h4><strong>Click on the password to show or hide password:</strong></h4>
+<form>
+    <div class = "container">
+        <h4><strong><span class = "label">Password: </span></strong></h4>
+        <input class = "box" type = "password" id = "Password" oninput = "hidePassword()" onclick = "showPassword()">
+    </div>
+</form>
+
+<script>
+
+    function hidePassword() {
+        let passwordEntry = document.getElementById("Password")
+        passwordEntry.type = "password";
+        passwordEntry.style.backgroundColor = "lightblue";
+    }
+
+    function showPassword() {
+        let passwordEntry = document.getElementById("Password");
+
+        if (passwordEntry.type === "password") {
+            passwordEntry.type = "text";
+            passwordEntry.style.backgroundColor = "lightgreen";
+        } else {
+            passwordEntry.type = "password";
+            passwordEntry.style.backgroundColor = "lightblue";
+        }
+    }
+
+</script>
