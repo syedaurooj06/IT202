@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Week Eleven Class Participation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Please verify your email address</h1>
+    <form id = "emailForm">
+        <label for = "submission">Email Address:</label>
+        <input type = "text" id = "submission">
+        <label for = "asterisk" style = "display: inline;" id = "asterisk">*</label>
+        <span class = "required" style = "display: none;" id = "emailRequired1">This field is required.</span>
+        <br>
+
+        <label for = "confirmation">Confirm Email Address:</label>
+        <input type = "text" id = "confirmation">
+        <label for = "asterisk2" style = "display: inline;" id = "asterisk2">*</label>
+        <span class = "required" style = "display: none;" id = "emailRequired2">This field is required.</span>
+        <span class="required" style="display: none;" id="emailMismatch">The email addresses must match.</span>
+        <br>
+
+        <button type = "submit" name = "confirm">Confirm</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#emailForm').submit(function () {
+                
+                $('#emailRequired1, #emailRequired2, #emailMismatch').hide();
+
+                var email1 = $('#submission').val().trim();
+                var email2 = $('#confirmation').val().trim();
+                var isValid = true;
+
+                if (email1 === '') {
+                    $('#asterisk').hide();
+                    $('#emailRequired1').show();
+                    isValid = false;
+                }
+
+                if (email2 === '') {
+                    $('#asterisk2').hide();
+                    $('#emailRequired2').show();
+                    isValid = false;
+                }
+
+                if (isValid && email1 !== email2) {
+
+                    $('#emailMismatch').show();
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert("Email confirmation successful");
+                }
+
+                return isValid;
+            });
+        });
+    </script>
+</body>
+
+
+</html>
