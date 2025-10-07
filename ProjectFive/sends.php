@@ -1,9 +1,5 @@
 <?php
 
-    $server = "sql1.njit.edu";
-    $username = "ssu23";
-    $password = "Bellyflop0624!";
-    $db = "ssu23";
     $con = mysqli_connect($server, $username, $password, $db);
 
     $senderName = mysqli_real_escape_string($con, $_REQUEST["senderName"]);
@@ -31,5 +27,6 @@
     }
 
     mysqli_close($con);
+
 
 ?>
