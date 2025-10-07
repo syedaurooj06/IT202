@@ -1,11 +1,9 @@
+<!-- Access to webpage: https://web.njit.edu/~ssu23/WeekThirteenClassParticipation/index.php -->
+
 <body>
 
     <?php
 
-        $servername = "sql1.njit.edu";
-        $username = "ssu23";
-        $password = "Bellyflop0624!";
-        $dbname = "ssu23";
         $con = mysqli_connect($servername, $username, $password, $dbname);
 
         if (mysqli_connect_errno()) {
@@ -18,6 +16,8 @@
             $studentName = $_POST["nameVar"];
             $sql = "SELECT * FROM WeekNineStudentTable WHERE Name='" . $studentName . "'";
             $result = $con->query($sql);
+
+            // Names are Syeda, Hemadharshinii, Ruvan, Katherine
 
             echo "<table border = '1'>";
             echo '<tr> 
@@ -45,5 +45,6 @@
         <input type="text" name="nameVar" id="nameVar"><br>
         <button type="submit" name="sub">Submit</button>
     </form>
+
 
 </body>
