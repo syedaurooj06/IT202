@@ -1,10 +1,9 @@
+<!-- Access to webpage: https://web.njit.edu/~ssu23/WeekTenClassParticipation/main.php -->
+
 <body>
 
 <?php
-$servername = "sql1.njit.edu";
-$username = "ssu23";
-$password = "Bellyflop0624!";
-$dbname = "ssu23";
+
 $con = mysqli_connect($servername, $username, $password, $dbname);
 
 if (mysqli_connect_errno()) {
@@ -25,6 +24,8 @@ $sql = "SELECT Name, StudentID, Major, Course, Grade
         INNER JOIN WeekNineTranscriptTable 
         ON ID = StudentID
         WHERE StudentID = $studId";
+
+// Student IDs are 9013, 5277, 8245, 6901
 
 $result = $con->query($sql);
 
@@ -53,3 +54,4 @@ echo '<br><button onclick="window.location.href=\'main.php\'">Home</button>';
 ?>
 
 </body>
+
