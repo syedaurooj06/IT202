@@ -1,3 +1,5 @@
+<!-- Access to webpage: https://web.njit.edu/~ssu23/ProjectFive/home.php -->
+
 <!DOCTYPE html>
 <html lang = "en">
 
@@ -15,10 +17,6 @@
 
         <div class = "sideBar">
             <?php
-                $server = "sql1.njit.edu";
-                $username = "ssu23";
-                $password = "Bellyflop0624!";
-                $db = "ssu23";
                 $con = mysqli_connect($server, $username, $password, $db);
 
                 $sql = "SELECT `User` FROM `ProjectFiveUserTable`";
@@ -77,5 +75,6 @@
     </div>
 
 </body>
+
 
 </html>
