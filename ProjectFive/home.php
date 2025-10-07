@@ -1,4 +1,7 @@
-<!-- Access to webpage: https://web.njit.edu/~ssu23/ProjectFive/home.php -->
+<!-- 
+Access to webpage: https://web.njit.edu/~ssu23/ProjectFive/home.php 
+Must have two browsers with link open to communicate
+-->
 
 <!DOCTYPE html>
 <html lang = "en">
@@ -40,8 +43,12 @@
                     <h2><label for = "senderName" class = "senderName">Name:</label></h2>
                     <input type = "text" id = "senderName"><br/>
 
+                    <!-- Name options are Syeda, Hemadharshinii, Ruvan, Katherine, Rizwan -->
+
                     <h2><label for = "senderPassword" class = "senderPassword">Password:</label></h2>
                     <input type = "text" id = "senderPassword"><br/>
+
+                    <!-- Password options are 1234, 5678, 9013, 6805, 6901, respectively. -->
 
                     <div style="display: flex; justify-content: center;">
                         <p id="warning" style="display: none">Warning: User not found</p>
@@ -78,3 +85,4 @@
 
 
 </html>
+
